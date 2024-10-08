@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Book Management Application</title>
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Record Management System</h1>
+
+        <div class="form-section">
+            <h3>Add/Edit Book</h3>
+            <form id="book-form">
+                <input type="text" id="title" placeholder="Book Title" required>
+                <input type="text" id="author" placeholder="Author" required>
+                <input type="text" id="isbn" placeholder="ISBN" required>
+                <input type="hidden" id="book-id">
+                <button type="submit" class="btn">Save Book</button>
+            </form>
+        </div>
+
+        <div class="search-section">
+            <h3>Search Books</h3>
+            <input type="text" id="search" placeholder="Search by title, author, or ISBN">
+        </div>
+
+        <h3>Books List</h3>
+        <table id="book-list">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Book records will appear here -->
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prev" class="btn">Previous</button>
+            <span id="page-num">Page 1</span>
+            <button id="next" class="btn">Next</button>
+        </div>
+    </div>
+    <script src="book.js"></script>
+</body>
+</html>
